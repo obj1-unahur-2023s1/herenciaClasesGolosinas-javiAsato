@@ -11,6 +11,10 @@ object mariano {
 	method primerGolosina() { return golosinas.first() }
 	method ultimaGolosina() { return golosinas.last() }
 	
+	method banearGolosina(_golosina) {
+		golosinas.add(new GolosinaBaniada(golosinaInterior = _golosina))
+	}
+	
 	method pesoGolosinas() { 
 		return golosinas.sum({ golo => golo.peso() })
 	}
